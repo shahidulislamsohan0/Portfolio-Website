@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            scroll-behavior: smooth;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #3A6773;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            background-color: #000;
+            color: white;
+
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(web-design-coding-program-content-graphic.jpg);
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+
+        }
+
+
+
+
+        .hero h1 {
+            font-size: 3em;
+        }
+
+        .hero p {
+            font-size: 1.5em;
+        }
+
+        /* Portfolio Section */
+        .portfolio {
+            padding-top: 60px;
+
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(development-4536630_1280.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .portfolio .card {
+            transition: transform 0.3s;
+        }
+
+        .portfolio .card:hover {
+            transform: scale(1.05);
+        }
+
+        .portfolio h2 {
+            color: aliceblue;
+        }
+
+        .card {
+            background-color: #3A6773;
+        }
+
+        /* About Section */
+        #about-us {
+            padding: 60px 0;
+
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(web-design-4875183_1280.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+
+
+        }
+
+        #about-us p {
+            font-size: 35px;
+
+        }
+
+        #about-us li {
+            font-size: 25px;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 10px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 2px;
+            background: #333;
+        }
+
+        .timeline-entry {
+            padding: 20px;
+            position: relative;
+        }
+
+        .timeline-entry:nth-child(even) {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .timeline-entry:nth-child(odd) {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 60px 0;
+            background-color: #25435e;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+        }
+
+        .photo {
+            height: 60px;
+            width: 50px;
+        }
+
+
+
+
+
+
+
+
+        .title {
+            margin-bottom: 80px;
+        }
+
+        #contact {
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(social-media-8719814_1280.png);
+            ;
+        }
+
+        #about-us h1 {
+            color: aliceblue;
+        }
+
+        #about-us p {
+            color: aliceblue;
+        }
+
+        #about-us ul {
+            color: aliceblue;
+
+        }
+
+        .contact p {
+            color: aliceblue;
+        }
+
+        .contact h2 {
+            color: aliceblue;
+        }
+
+        .form-control {
+            background-color: aliceblue;
+        }
+
+        .img-fluid {
+            height: 500px;
+            ;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Developer Sohan</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about-us">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li>
+                        <a href="SHAHIDUL ISLAM SOHAN.pdf" class="btn btn-outline-light">Resume</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Creative Designer & Developer</p>
+            <a href="#portfolio" class="btn btn-light">View My Work</a>
+        </div>
+    </section>
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <h2 class="text-center">Portfolio</h2>
+            <div class="text-center mb-3 ">
+                <button class="btn btn-outline-light filter-btn" data-filter="*">All</button>
+                <button class="btn btn-outline-light filter-btn" data-filter=".web">Web Design</button>
+                <button class="btn btn-outline-light filter-btn" data-filter=".mobile">Mobile Apps</button>
+
+            </div>
+            <div class="row">
+                <!-- Portfolio Item 1 -->
+                <div class="col-md-4  mb-4">
+                    <div class="card">
+                        <img src="Portfolio website.jpg" class="card-img-top" alt="Project Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Portfolio Website</h5>
+                            <p class="card-text">This is a Portfolio Website.</p>
+                            <a href="#" class="btn btn-dark">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 2 -->
+                <div class="col-md-4  mb-4">
+                    <div class="card ">
+                        <img src="Portfoliowebsite(1).jpg" class="card-img-top" alt="Project Image">
+                        <div class="card-body">
+                            <h5 class="card-title">E-commerce Website</h5>
+                            <p class="card-text">This is a E-commerce Website.</p>
+                            <a href="#" class="btn btn-dark">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 3 -->
+                <div class="col-md-4  mb-4">
+                    <div class="card">
+                        <img src="Portfoliowebsite(2).jpg" class="card-img-top" alt="Project Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Agency Website</h5>
+                            <p class="card-text">This is a Agency Website.</p>
+                            <a href="https://agencyweb33.netlify.app/" class="btn btn-dark">GO To The Site</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about-us">
+        <div class="container">
+            <h1 class="title text-center">WHY CHOOSE ME?</h1>
+            <div class="row">
+                <div class="col-md-6 ">
+                    <p class="about-title">Why I AM Different For</p>
+                    <ul>
+                        <li>Skill Proficiency.</li><br>
+                        <li>Efficiency.</li><br>
+                        <li>Responsive Design.</li><br>
+                        <li>Attention Detail.</li><br>
+                        <li>Problem-solving Abilities.</li><br>
+                        <li>Creativity.</li><br>
+                        <li>Communication Skills.</li>
+                    </ul>
+                </div>
+                <div class="col-md-6  ">
+                    <img src="Untitled design.png" class="img-fluid">
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="text-center">Contact Me</h2>
+            <div class="row">
+                <div class="col-md-6 ">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-outline-light">Send</button>
+                    </form>
+                </div>
+                <div class="col-md-6 ">
+                    <p>Connect with me on social media:</p>
+                    <a href="#" class="btn btn-outline-light"><i class="fab fa-twitter"></i> Twitter</a>
+                    <a href="https://www.linkedin.com/in/shahidul-islam-85ab19264/" class="btn btn-outline-light"><i
+                            class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="#" class="btn btn-outline-light"><i class="fab fa-instagram"></i> Instagram</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="py-4">
+        <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
